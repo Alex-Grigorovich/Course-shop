@@ -1,0 +1,31 @@
+<nav>
+    <div class="nav-wrapper">
+        <a href="#" class="brand-logo">MyCourse</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+
+            <!--            условия для активной ссылки при наведении в навбаре-->
+
+            {{#if isHome}}
+                <li class="active"><a href="/">Главная страница</a></li>
+            {{else}}
+                <li><a href="/">Главная страница</a></li>
+            {{/if}}
+
+            {{#if isCourses}}
+                <li class="active"><a href="/courses">Список курсов</a></li>
+            {{else}}
+                <li><a href="/courses">Список курсов</a></li>
+            {{/if}}
+
+
+            {{#if isAdd}}
+                <li class="active"><a href="/add">Добавить курс</a></li>
+            {{else}}
+                <li><a href="/add">Добавить курс</a></li>
+            {{/if}}
+
+
+        </ul>
+    </div>
+
+</nav>

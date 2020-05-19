@@ -10,5 +10,10 @@
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^2.0.4"
+  },
+  "dependencies": {
+    "express-handlebars": "^4.0.4",
+    "handlebars": "^4.7.6",
+    "install": "^0.13.0"
   }
 }
