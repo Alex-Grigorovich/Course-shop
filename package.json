@@ -13,9 +13,10 @@
     "nodemon": "^2.0.4"
   },
   "dependencies": {
+    "express": "~4.16.1",
     "express-handlebars": "^4.0.4",
     "handlebars": "^4.7.6",
-    "express": "~4.16.1",
-    "install": "^0.13.0"
+    "install": "^0.13.0",
+    "uuid": "^8.0.0"
   }
 }
