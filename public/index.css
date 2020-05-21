@@ -34,3 +34,9 @@
 .info {
     font-size: 2rem;
 }
+
+.actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
