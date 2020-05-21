@@ -10,5 +10,11 @@
     "price": "20000",
     "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png",
     "id": "5d5276ba-fd49-46d2-852d-4d80b2664a00"
+  },
+  {
+    "title": "CSS",
+    "price": "5000",
+    "img": "https://c7.hotpng.com/preview/241/797/259/cascading-style-sheets-css3-javascript-logo-world-wide-web.jpg",
+    "id": "3468d134-67b6-4206-a01e-6126e76304c8"
   }
 ]
