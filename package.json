@@ -17,6 +17,6 @@
     "express-handlebars": "^4.0.4",
     "handlebars": "^4.7.6",
     "install": "^0.13.0",
-    "uuid/v4": "^8.0.0"
+    "uuid": "^8.0.0"
   }
 }
