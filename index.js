@@ -5,13 +5,19 @@ const homeRoutes = require('./routes/home')
 const addRoutes = require('./routes/add')
 const cartRoutes = require('./routes/cart')
 const coursesRoutes = require('./routes/courses')
+const mongoose = require('mongoose')
+
+const Handlebars = require('handlebars')
+const {allowInsecurePrototypeAccess} = require('@handlebars/allow-prototype-access')
+
 
 //инициализация порта
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
 const exphbs = require('express-handlebars')
 const hbs = exphbs.create({
     defaultLayout: 'main',
-    extname: 'hbs'
+    extname: 'hbs',
+    handlebars: allowInsecurePrototypeAccess(Handlebars)
 })
 
 app.engine('hbs', hbs.engine)
@@ -27,8 +33,19 @@ app.use('/courses', coursesRoutes)
 
 //получение страницы
 
+//pass = HlL94Lsde7f51C4x
 
-app.listen(PORT, () => {
-    console.log(`SERVER STARTED ON PORT ${PORT}`)
+async function start() {
+    try {
+        const url = `mongodb+srv://Dan:HlL94Lsde7f51C4x@cluster0-u6m3d.mongodb.net/myshop`
+        await mongoose.connect(url, {useNewUrlParser: true,
+            useUnifiedTopology: true})
+        app.listen(PORT, () => {
+            console.log(`Server is running on port ${PORT}`)
+        })
+    } catch (e) {
+        console.log(e)
+    }
+}
 
-})
+start()
