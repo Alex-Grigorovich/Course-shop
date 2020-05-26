@@ -4,6 +4,9 @@ const router = Router()
 
 router.get('/', async (req, res) => {
     const courses = await Course.find()
+
+
+
     res.render('courses', {
         title: 'Список курсов',
         isCourses: true,
@@ -30,6 +33,16 @@ router.post('/edit', async (req, res) => {
     delete req.body.id
     await Course.findByIdAndUpdate(id, req.body )
     res.redirect('/courses')
+})
+
+
+router.post('/remove', async (req, res)=>{
+    try{
+        await Course.deleteOne({_id: req.body.id})
+        res.redirect('/courses')
+    }catch (e) {
+        console.log(e)
+    }
 })
 
 
