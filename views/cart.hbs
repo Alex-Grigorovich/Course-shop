@@ -1,4 +1,4 @@
-<h1>Корзина</h1>
+ <h1>Корзина</h1>
 
 
 <div id="cart">
@@ -25,6 +25,11 @@
             </tbody>
         </table>
         <p><strong>Цена: </strong><span class="price">{{price}} </span></p>
+
+        <form action="/orders" method="post">
+            <button type="submit" class="btn">Сделать заказ</button>
+        </form>
+
     {{else}}
     {{/if}}
 
